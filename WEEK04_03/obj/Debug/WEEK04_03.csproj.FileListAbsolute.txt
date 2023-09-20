@@ -1,0 +1,10 @@
+W:\WINP\WEEK04_03\bin\Debug\WEEK04_03.exe.config
+W:\WINP\WEEK04_03\bin\Debug\WEEK04_03.exe
+W:\WINP\WEEK04_03\bin\Debug\WEEK04_03.pdb
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.csproj.AssemblyReference.cache
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.Form1.resources
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.Properties.Resources.resources
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.csproj.GenerateResource.cache
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.csproj.CoreCompileInputs.cache
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.exe
+W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.pdb

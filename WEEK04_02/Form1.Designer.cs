@@ -38,21 +38,24 @@
             this.textCenter = new System.Windows.Forms.RadioButton();
             this.textLeft = new System.Windows.Forms.RadioButton();
             this.banButton = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.hideButton = new System.Windows.Forms.CheckBox();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.exitForm = new System.Windows.Forms.Button();
             this.backColorGroup.SuspendLayout();
             this.textAlignGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainButton
             // 
+            this.mainButton.BackColor = System.Drawing.SystemColors.Control;
             this.mainButton.Font = new System.Drawing.Font("굴림", 18F);
             this.mainButton.Location = new System.Drawing.Point(40, 12);
-            this.mainButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainButton.Margin = new System.Windows.Forms.Padding(2);
             this.mainButton.Name = "mainButton";
             this.mainButton.Size = new System.Drawing.Size(220, 50);
             this.mainButton.TabIndex = 0;
             this.mainButton.Text = "버튼";
-            this.mainButton.UseVisualStyleBackColor = true;
+            this.mainButton.UseVisualStyleBackColor = false;
             // 
             // backColorGroup
             // 
@@ -60,9 +63,9 @@
             this.backColorGroup.Controls.Add(this.backGreen);
             this.backColorGroup.Controls.Add(this.backRed);
             this.backColorGroup.Location = new System.Drawing.Point(12, 75);
-            this.backColorGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backColorGroup.Margin = new System.Windows.Forms.Padding(2);
             this.backColorGroup.Name = "backColorGroup";
-            this.backColorGroup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backColorGroup.Padding = new System.Windows.Forms.Padding(2);
             this.backColorGroup.Size = new System.Drawing.Size(135, 95);
             this.backColorGroup.TabIndex = 1;
             this.backColorGroup.TabStop = false;
@@ -72,19 +75,20 @@
             // 
             this.backBlue.AutoSize = true;
             this.backBlue.Location = new System.Drawing.Point(7, 67);
-            this.backBlue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backBlue.Margin = new System.Windows.Forms.Padding(2);
             this.backBlue.Name = "backBlue";
             this.backBlue.Size = new System.Drawing.Size(47, 16);
             this.backBlue.TabIndex = 2;
             this.backBlue.TabStop = true;
             this.backBlue.Text = "파랑";
             this.backBlue.UseVisualStyleBackColor = true;
+            this.backBlue.CheckedChanged += new System.EventHandler(this.backBlue_CheckedChanged);
             // 
             // backGreen
             // 
             this.backGreen.AutoSize = true;
             this.backGreen.Location = new System.Drawing.Point(7, 44);
-            this.backGreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backGreen.Margin = new System.Windows.Forms.Padding(2);
             this.backGreen.Name = "backGreen";
             this.backGreen.Size = new System.Drawing.Size(47, 16);
             this.backGreen.TabIndex = 1;
@@ -92,18 +96,20 @@
             this.backGreen.Text = "초록";
             this.backGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.backGreen.UseVisualStyleBackColor = true;
+            this.backGreen.CheckedChanged += new System.EventHandler(this.backGreen_CheckedChanged);
             // 
             // backRed
             // 
             this.backRed.AutoSize = true;
             this.backRed.Location = new System.Drawing.Point(7, 21);
-            this.backRed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backRed.Margin = new System.Windows.Forms.Padding(2);
             this.backRed.Name = "backRed";
             this.backRed.Size = new System.Drawing.Size(47, 16);
             this.backRed.TabIndex = 0;
             this.backRed.TabStop = true;
             this.backRed.Text = "빨강";
             this.backRed.UseVisualStyleBackColor = true;
+            this.backRed.CheckedChanged += new System.EventHandler(this.backRed_CheckedChanged);
             // 
             // textAlignGroup
             // 
@@ -111,9 +117,9 @@
             this.textAlignGroup.Controls.Add(this.textCenter);
             this.textAlignGroup.Controls.Add(this.textLeft);
             this.textAlignGroup.Location = new System.Drawing.Point(157, 75);
-            this.textAlignGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textAlignGroup.Margin = new System.Windows.Forms.Padding(2);
             this.textAlignGroup.Name = "textAlignGroup";
-            this.textAlignGroup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textAlignGroup.Padding = new System.Windows.Forms.Padding(2);
             this.textAlignGroup.Size = new System.Drawing.Size(135, 95);
             this.textAlignGroup.TabIndex = 2;
             this.textAlignGroup.TabStop = false;
@@ -123,71 +129,98 @@
             // 
             this.textRight.AutoSize = true;
             this.textRight.Location = new System.Drawing.Point(7, 67);
-            this.textRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textRight.Margin = new System.Windows.Forms.Padding(2);
             this.textRight.Name = "textRight";
             this.textRight.Size = new System.Drawing.Size(59, 16);
             this.textRight.TabIndex = 2;
             this.textRight.TabStop = true;
             this.textRight.Text = "오른쪽";
             this.textRight.UseVisualStyleBackColor = true;
+            this.textRight.CheckedChanged += new System.EventHandler(this.textRight_CheckedChanged);
             // 
             // textCenter
             // 
             this.textCenter.AutoSize = true;
             this.textCenter.Location = new System.Drawing.Point(7, 44);
-            this.textCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCenter.Margin = new System.Windows.Forms.Padding(2);
             this.textCenter.Name = "textCenter";
             this.textCenter.Size = new System.Drawing.Size(47, 16);
             this.textCenter.TabIndex = 1;
             this.textCenter.TabStop = true;
             this.textCenter.Text = "중앙";
             this.textCenter.UseVisualStyleBackColor = true;
+            this.textCenter.CheckedChanged += new System.EventHandler(this.textCenter_CheckedChanged);
             // 
             // textLeft
             // 
             this.textLeft.AutoSize = true;
             this.textLeft.Location = new System.Drawing.Point(7, 21);
-            this.textLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textLeft.Margin = new System.Windows.Forms.Padding(2);
             this.textLeft.Name = "textLeft";
             this.textLeft.Size = new System.Drawing.Size(47, 16);
             this.textLeft.TabIndex = 0;
             this.textLeft.TabStop = true;
             this.textLeft.Text = "왼쪽";
             this.textLeft.UseVisualStyleBackColor = true;
+            this.textLeft.CheckedChanged += new System.EventHandler(this.textLeft_CheckedChanged);
             // 
             // banButton
             // 
             this.banButton.AutoSize = true;
             this.banButton.Location = new System.Drawing.Point(12, 185);
-            this.banButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.banButton.Margin = new System.Windows.Forms.Padding(2);
             this.banButton.Name = "banButton";
             this.banButton.Size = new System.Drawing.Size(104, 16);
             this.banButton.TabIndex = 3;
             this.banButton.Text = "버튼 사용 금지";
             this.banButton.UseVisualStyleBackColor = true;
+            this.banButton.CheckedChanged += new System.EventHandler(this.banButton_CheckedChanged);
             // 
-            // checkBox1
+            // hideButton
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 218);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(88, 16);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "버튼 숨기기";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.hideButton.AutoSize = true;
+            this.hideButton.Location = new System.Drawing.Point(12, 218);
+            this.hideButton.Margin = new System.Windows.Forms.Padding(2);
+            this.hideButton.Name = "hideButton";
+            this.hideButton.Size = new System.Drawing.Size(88, 16);
+            this.hideButton.TabIndex = 4;
+            this.hideButton.Text = "버튼 숨기기";
+            this.hideButton.UseVisualStyleBackColor = true;
+            this.hideButton.CheckedChanged += new System.EventHandler(this.hideButton_CheckedChanged);
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(164, 214);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(60, 23);
+            this.resetButton.TabIndex = 5;
+            this.resetButton.Text = "초기화";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
+            // exitForm
+            // 
+            this.exitForm.Location = new System.Drawing.Point(230, 214);
+            this.exitForm.Name = "exitForm";
+            this.exitForm.Size = new System.Drawing.Size(60, 23);
+            this.exitForm.TabIndex = 5;
+            this.exitForm.Text = "종료";
+            this.exitForm.UseVisualStyleBackColor = true;
+            this.exitForm.Click += new System.EventHandler(this.exitForm_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 246);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.exitForm);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.hideButton);
             this.Controls.Add(this.banButton);
             this.Controls.Add(this.textAlignGroup);
             this.Controls.Add(this.backColorGroup);
             this.Controls.Add(this.mainButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "WEEK04_02";
             this.backColorGroup.ResumeLayout(false);
@@ -211,7 +244,9 @@
         private System.Windows.Forms.RadioButton textRight;
         private System.Windows.Forms.RadioButton textCenter;
         private System.Windows.Forms.CheckBox banButton;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox hideButton;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button exitForm;
     }
 }
 
