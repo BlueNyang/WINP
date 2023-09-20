@@ -1,0 +1,10 @@
+D:\WinP\20202717_안규태\WEEK04_02\bin\Debug\WEEK04_02.exe.config
+D:\WinP\20202717_안규태\WEEK04_02\bin\Debug\WEEK04_02.exe
+D:\WinP\20202717_안규태\WEEK04_02\bin\Debug\WEEK04_02.pdb
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.csproj.AssemblyReference.cache
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.Form1.resources
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.Properties.Resources.resources
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.csproj.GenerateResource.cache
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.csproj.CoreCompileInputs.cache
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.exe
+D:\WinP\20202717_안규태\WEEK04_02\obj\Debug\WEEK04_02.pdb
