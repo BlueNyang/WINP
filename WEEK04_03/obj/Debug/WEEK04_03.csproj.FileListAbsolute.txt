@@ -8,3 +8,13 @@ W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.csproj.GenerateResource.cache
 W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.csproj.CoreCompileInputs.cache
 W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.exe
 W:\WINP\WEEK04_03\obj\Debug\WEEK04_03.pdb
+D:\WinP\20202717_안규태\WEEK04_03\bin\Debug\WEEK04_03.exe.config
+D:\WinP\20202717_안규태\WEEK04_03\bin\Debug\WEEK04_03.exe
+D:\WinP\20202717_안규태\WEEK04_03\bin\Debug\WEEK04_03.pdb
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.csproj.AssemblyReference.cache
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.Form1.resources
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.Properties.Resources.resources
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.csproj.GenerateResource.cache
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.csproj.CoreCompileInputs.cache
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.exe
+D:\WinP\20202717_안규태\WEEK04_03\obj\Debug\WEEK04_03.pdb

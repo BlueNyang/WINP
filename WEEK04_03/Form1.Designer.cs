@@ -73,7 +73,7 @@
             this.hideButton.Location = new System.Drawing.Point(12, 200);
             this.hideButton.Margin = new System.Windows.Forms.Padding(2);
             this.hideButton.Name = "hideButton";
-            this.hideButton.Size = new System.Drawing.Size(88, 16);
+            this.hideButton.Size = new System.Drawing.Size(130, 22);
             this.hideButton.TabIndex = 10;
             this.hideButton.Text = "버튼 숨기기";
             this.hideButton.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.banButton.Location = new System.Drawing.Point(12, 180);
             this.banButton.Margin = new System.Windows.Forms.Padding(2);
             this.banButton.Name = "banButton";
-            this.banButton.Size = new System.Drawing.Size(104, 16);
+            this.banButton.Size = new System.Drawing.Size(154, 22);
             this.banButton.TabIndex = 9;
             this.banButton.Text = "버튼 사용 금지";
             this.banButton.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.textRight.Location = new System.Drawing.Point(7, 67);
             this.textRight.Margin = new System.Windows.Forms.Padding(2);
             this.textRight.Name = "textRight";
-            this.textRight.Size = new System.Drawing.Size(59, 16);
+            this.textRight.Size = new System.Drawing.Size(87, 22);
             this.textRight.TabIndex = 2;
             this.textRight.TabStop = true;
             this.textRight.Text = "오른쪽";
@@ -124,7 +124,7 @@
             this.textCenter.Location = new System.Drawing.Point(7, 44);
             this.textCenter.Margin = new System.Windows.Forms.Padding(2);
             this.textCenter.Name = "textCenter";
-            this.textCenter.Size = new System.Drawing.Size(47, 16);
+            this.textCenter.Size = new System.Drawing.Size(69, 22);
             this.textCenter.TabIndex = 1;
             this.textCenter.TabStop = true;
             this.textCenter.Text = "중앙";
@@ -137,7 +137,7 @@
             this.textLeft.Location = new System.Drawing.Point(7, 21);
             this.textLeft.Margin = new System.Windows.Forms.Padding(2);
             this.textLeft.Name = "textLeft";
-            this.textLeft.Size = new System.Drawing.Size(47, 16);
+            this.textLeft.Size = new System.Drawing.Size(69, 22);
             this.textLeft.TabIndex = 0;
             this.textLeft.TabStop = true;
             this.textLeft.Text = "왼쪽";
@@ -164,7 +164,7 @@
             this.backBlue.Location = new System.Drawing.Point(7, 67);
             this.backBlue.Margin = new System.Windows.Forms.Padding(2);
             this.backBlue.Name = "backBlue";
-            this.backBlue.Size = new System.Drawing.Size(47, 16);
+            this.backBlue.Size = new System.Drawing.Size(69, 22);
             this.backBlue.TabIndex = 2;
             this.backBlue.TabStop = true;
             this.backBlue.Text = "파랑";
@@ -177,7 +177,7 @@
             this.backGreen.Location = new System.Drawing.Point(7, 44);
             this.backGreen.Margin = new System.Windows.Forms.Padding(2);
             this.backGreen.Name = "backGreen";
-            this.backGreen.Size = new System.Drawing.Size(47, 16);
+            this.backGreen.Size = new System.Drawing.Size(69, 22);
             this.backGreen.TabIndex = 1;
             this.backGreen.TabStop = true;
             this.backGreen.Text = "초록";
@@ -191,7 +191,7 @@
             this.backRed.Location = new System.Drawing.Point(7, 21);
             this.backRed.Margin = new System.Windows.Forms.Padding(2);
             this.backRed.Name = "backRed";
-            this.backRed.Size = new System.Drawing.Size(47, 16);
+            this.backRed.Size = new System.Drawing.Size(69, 22);
             this.backRed.TabIndex = 0;
             this.backRed.TabStop = true;
             this.backRed.Text = "빨강";
@@ -216,7 +216,7 @@
             this.boolApply.AutoSize = true;
             this.boolApply.Location = new System.Drawing.Point(12, 220);
             this.boolApply.Name = "boolApply";
-            this.boolApply.Size = new System.Drawing.Size(96, 16);
+            this.boolApply.Size = new System.Drawing.Size(142, 22);
             this.boolApply.TabIndex = 13;
             this.boolApply.Text = "적용버튼사용";
             this.boolApply.UseVisualStyleBackColor = true;
