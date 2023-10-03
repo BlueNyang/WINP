@@ -1,4 +1,4 @@
-﻿namespace WEEK06_01
+﻿namespace WEEK05_01
 {
     partial class IdPwForm
     {

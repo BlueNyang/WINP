@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WEEK06_01
+namespace WEEK05_01
 {
     internal static class Program
     {
