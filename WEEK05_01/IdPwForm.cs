@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WEEK05_01
@@ -19,24 +20,37 @@ namespace WEEK05_01
 
         private void idTextBox_Click(object sender, EventArgs e)
         {
-            if (idTextBox.Text == "아이디를 입력해주세요.") idTextBox.Text = "";
+            if (idTextBox.Text == "아이디를 입력해주세요.")
+            { 
+                idTextBox.Text = "";
+                idTextBox.ForeColor = SystemColors.WindowText;
+            }
         }
 
         private void idTextBox_Leave(object sender, EventArgs e)
         {
-            if (idTextBox.Text == "") idTextBox.Text = "아이디를 입력해주세요";
+            if (idTextBox.Text == "")
+            {
+                idTextBox.Text = "아이디를 입력해주세요.";
+                idTextBox.ForeColor = SystemColors.WindowFrame;
+            }
         }
 
         private void pwTextBox_Click(object sender, EventArgs e)
         {
             if (pwTextBox.Text == "비밀번호를 입력해주세요.") pwTextBox.Text = "";
             pwTextBox.PasswordChar = '*';
+            pwTextBox.ForeColor = SystemColors.WindowText;
         }
 
         private void pwTextBox_Leave(object sender, EventArgs e)
         {
-            if (pwTextBox.Text == "") pwTextBox.Text = "비밀번호를 입력해주세요.";
-            pwTextBox.PasswordChar = '\0';
+            if (pwTextBox.Text == "")
+            {
+                pwTextBox.Text = "비밀번호를 입력해주세요.";
+                pwTextBox.PasswordChar = '\0';
+                pwTextBox.ForeColor = SystemColors.WindowFrame;
+            }
         }
         private void button_OK()
         {
@@ -52,6 +66,8 @@ namespace WEEK05_01
                 idTextBox.Text = "아이디를 입력해주세요.";
                 pwTextBox.Text = "비밀번호를 입력해주세요.";
                 pwTextBox.PasswordChar = '\0';
+                idTextBox.ForeColor = SystemColors.WindowFrame;
+                pwTextBox.ForeColor = SystemColors.WindowFrame;
                 confirmButton.Focus();
             }
         }
