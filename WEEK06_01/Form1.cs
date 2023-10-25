@@ -13,9 +13,9 @@ namespace WEEK06_01
             InitializeComponent();
         }
 
-        private String m_strInfo = "";
+        private string m_strInfo = "";
 
-        public String strInfo
+        public string strInfo
         {
             get { return m_strInfo; }
             set
@@ -80,15 +80,20 @@ namespace WEEK06_01
 
         private void changeFont_Click(object sender, EventArgs e)
         {
-            fontDialog1.ShowDialog();
-            mainTextbox.Font = fontDialog1.Font;
-            mainTextbox.ForeColor = fontDialog1.Color;
+            DialogResult result = fontDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                mainTextbox.Font = fontDialog1.Font;
+                mainTextbox.ForeColor = fontDialog1.Color;
+            }
         }
 
         private void tbColor_Click(object sender, EventArgs e)
         {
-            colorDialog1.ShowDialog();
-            mainTextbox.BackColor = colorDialog1.Color;
+            DialogResult result = colorDialog1.ShowDialog();
+            if(result == DialogResult.OK)
+                mainTextbox.BackColor = colorDialog1.Color;
+            
         }
 
         private void PrintPage(object sender, PrintPageEventArgs e)
@@ -110,7 +115,5 @@ namespace WEEK06_01
             if (result == DialogResult.OK)
                 pd.Print();
         }
-
-
     }
 }
