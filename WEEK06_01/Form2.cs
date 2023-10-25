@@ -5,9 +5,9 @@ namespace WEEK06_01
 {
     public partial class Form2 : Form
     {
-        private String _strText = "";
+        private string _strText = "";
         private Form1 form1 = null;
-        public String strText
+        public string strText
         {
             get { return _strText; }
             set { _strText = value + "대화상자"; }
