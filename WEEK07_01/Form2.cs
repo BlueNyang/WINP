@@ -26,15 +26,30 @@ namespace WEEK07_01
             }
             else
             {
-                MessageBox.Show("ID 또는 PW가 잘못 되었습니다.");
+                if (textBox_ID.Text.Equals("아이디를 입력해주세요.") || textBox_ID.Text.Equals(""))
+                {
+                    MessageBox.Show("ID를 입력하세요.");
+                    textBox_ID.Focus();
+                    ID_Click();
+                }
+                else if (textBox_PW.Text.Equals("비밀번호를 입력해주세요.") || textBox_PW.Text.Equals(""))
+                {
+                    MessageBox.Show("PW를 입력하세요.");
+                    textBox_PW.Focus();
+                    PW_Click();
+                }
+                else
+                {
+                    MessageBox.Show("ID 또는 PW가 잘못 되었습니다.");
 
-                textBox_ID.Text = "아이디를 입력해주세요.";
-                textBox_ID.ForeColor = SystemColors.WindowFrame;
-                textBox_PW.Text = "비밀번호를 입력해주세요.";
-                textBox_PW.PasswordChar = '\0';
-                textBox_PW.ForeColor = SystemColors.WindowFrame;
-                textBox_ID.Focus();
-                ID_Click();
+                    textBox_ID.Text = "아이디를 입력해주세요.";
+                    textBox_ID.ForeColor = SystemColors.WindowFrame;
+                    textBox_PW.Text = "비밀번호를 입력해주세요.";
+                    textBox_PW.PasswordChar = '\0';
+                    textBox_PW.ForeColor = SystemColors.WindowFrame;
+                    textBox_ID.Focus();
+                    ID_Click();
+                }
             }
         }
 
@@ -66,20 +81,13 @@ namespace WEEK07_01
             }
         }
 
-        private void textBox_ID_KeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
         private void textBox_ID_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Shift || e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
                 e.SuppressKeyPress = true;
 
             if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.KeyCode == Keys.Shift && e.KeyCode == Keys.Tab)
-            {
-                ActiveControl = button_OK;
-            }
+            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab) ActiveControl = button_OK;
             else if (e.KeyCode == Keys.Tab)
             {
                 textBox_PW.Focus();
@@ -111,17 +119,13 @@ namespace WEEK07_01
             }
         }
 
-        private void textBox_PW_KeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
         private void textBox_PW_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Shift || e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
                 e.SuppressKeyPress = true;
 
             if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.KeyCode == Keys.Shift && e.KeyCode == Keys.Tab)
+            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab)
             {
                 textBox_ID.Focus();
                 ID_Click();
@@ -129,17 +133,13 @@ namespace WEEK07_01
             else if (e.KeyCode == Keys.Tab) ActiveControl = button_OK;
         }
 
-        private void button_OK_KeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
         private void button_OK_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Shift || e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
                 e.SuppressKeyPress = true;
 
             if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.KeyCode == (Keys.Shift | Keys.Tab))
+            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab)
             {
                 textBox_PW.Focus();
                 PW_Click();

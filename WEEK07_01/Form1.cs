@@ -39,6 +39,8 @@ namespace WEEK07_01
         {
             if (e.Button == MouseButtons.Left)
                 MessageBox.Show("X : " + e.X + "Y : " + e.Y);
+            if (e.Button == MouseButtons.Right)
+                contextMenuStrip1.Show(MousePosition);
         }
 
         private void 새파일NToolStripMenuItem_Click(object sender, EventArgs e)

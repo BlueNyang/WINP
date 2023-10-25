@@ -9,3 +9,14 @@ W:\WinP\WEEK07_01\obj\Debug\WEEK07_01.csproj.CoreCompileInputs.cache
 W:\WinP\WEEK07_01\obj\Debug\WEEK07_01.exe
 W:\WinP\WEEK07_01\obj\Debug\WEEK07_01.pdb
 W:\WinP\WEEK07_01\obj\Debug\WEEK07_01.Form2.resources
+D:\WinP\20202717_안규태\WEEK07_01\bin\Debug\WEEK07_01.exe.config
+D:\WinP\20202717_안규태\WEEK07_01\bin\Debug\WEEK07_01.exe
+D:\WinP\20202717_안규태\WEEK07_01\bin\Debug\WEEK07_01.pdb
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.csproj.AssemblyReference.cache
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.Form1.resources
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.Form2.resources
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.Properties.Resources.resources
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.csproj.GenerateResource.cache
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.csproj.CoreCompileInputs.cache
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.exe
+D:\WinP\20202717_안규태\WEEK07_01\obj\Debug\WEEK07_01.pdb

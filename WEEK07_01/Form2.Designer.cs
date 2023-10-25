@@ -46,7 +46,6 @@
             this.button_OK.UseVisualStyleBackColor = true;
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
             this.button_OK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button_OK_KeyDown);
-            this.button_OK.KeyUp += new System.Windows.Forms.KeyEventHandler(this.button_OK_KeyUp);
             // 
             // textBox_ID
             // 
@@ -59,7 +58,6 @@
             this.textBox_ID.Text = "아이디를 입력해주세요.";
             this.textBox_ID.Click += new System.EventHandler(this.textBox_ID_Click);
             this.textBox_ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ID_KeyDown);
-            this.textBox_ID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_ID_KeyUp);
             this.textBox_ID.Leave += new System.EventHandler(this.textBox_ID_Leave);
             // 
             // textBox_PW
@@ -73,7 +71,6 @@
             this.textBox_PW.Text = "비밀번호를 입력해주세요.";
             this.textBox_PW.Click += new System.EventHandler(this.textBox_PW_Click);
             this.textBox_PW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PW_KeyDown);
-            this.textBox_PW.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_PW_KeyUp);
             this.textBox_PW.Leave += new System.EventHandler(this.textBox_PW_Leave);
             // 
             // label_ID
