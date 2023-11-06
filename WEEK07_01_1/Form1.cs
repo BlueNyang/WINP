@@ -50,7 +50,11 @@ namespace WEEK07_01
 
         private void 열기OToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(열기OToolStripMenuItem.Text);
+            openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.Filter = "텍스트 파일|*.txt|모든 파일|*.*";
+            openFileDialog1.FilterIndex = 1;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+                MessageBox.Show(openFileDialog1.FileName + "Open.");
         }
 
         private void 닫기CToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,17 +69,23 @@ namespace WEEK07_01
 
         private void 다른이름으로저장AToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(다른이름으로저장AToolStripMenuItem.Text);
+            saveFileDialog1.InitialDirectory = @"C:\";
+            saveFileDialog1.Filter = "텍스트 파일|*.txt|모든 파일|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                MessageBox.Show(saveFileDialog1.FileName + "saved");
         }
 
         private void 인쇄PToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(인쇄PToolStripMenuItem.Text);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("프린트");
         }
 
         private void 미리보기VToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(미리보기VToolStripMenuItem.Text);
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("미리보기");
         }
 
         private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,5 +140,10 @@ namespace WEEK07_01
             return baseResult;
         }
 
+        private void 글꼴ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+                MessageBox.Show(글꼴ToolStripMenuItem.Text);
+        }
     }
 }

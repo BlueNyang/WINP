@@ -26,30 +26,13 @@ namespace WEEK07_01
             }
             else
             {
-                if (textBox_ID.Text.Equals("아이디를 입력해주세요.") || textBox_ID.Text.Equals(""))
-                {
-                    MessageBox.Show("ID를 입력하세요.");
-                    textBox_ID.Focus();
-                    ID_Click();
-                }
-                else if (textBox_PW.Text.Equals("비밀번호를 입력해주세요.") || textBox_PW.Text.Equals(""))
-                {
-                    MessageBox.Show("PW를 입력하세요.");
-                    textBox_PW.Focus();
-                    PW_Click();
-                }
-                else
-                {
-                    MessageBox.Show("ID 또는 PW가 잘못 되었습니다.");
+                MessageBox.Show("ID 또는 PW가 잘못 되었습니다.");
 
-                    textBox_ID.Text = "아이디를 입력해주세요.";
-                    textBox_ID.ForeColor = SystemColors.WindowFrame;
-                    textBox_PW.Text = "비밀번호를 입력해주세요.";
-                    textBox_PW.PasswordChar = '\0';
-                    textBox_PW.ForeColor = SystemColors.WindowFrame;
-                    textBox_ID.Focus();
-                    ID_Click();
-                }
+                textBox_ID.Text = "아이디를 입력해주세요.";
+                textBox_PW.Text = "비밀번호를 입력해주세요.";
+                textBox_PW.PasswordChar = '\0';
+                textBox_ID.Focus();
+                ID_Click();
             }
         }
 
@@ -60,11 +43,7 @@ namespace WEEK07_01
 
         private void ID_Click()
         {
-            if (textBox_ID.Text == "아이디를 입력해주세요.")
-            {
-                textBox_ID.Text = "";
-                textBox_ID.ForeColor = SystemColors.WindowText;
-            }
+            if (textBox_ID.Text == "아이디를 입력해주세요.") textBox_ID.Text = "";
         }
 
         private void textBox_ID_Click(object sender, EventArgs e)
@@ -74,25 +53,22 @@ namespace WEEK07_01
 
         private void textBox_ID_Leave(object sender, EventArgs e)
         {
-            if(textBox_ID.Text == "")
-            {
-                textBox_ID.Text = "아이디를 입력해주세요.";
-                textBox_ID.ForeColor = SystemColors.WindowFrame;
-            }
+            if(textBox_ID.Text == "") textBox_ID.Text = "아이디를 입력해주세요.";
         }
-
-        private void textBox_ID_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_ID_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
-                e.SuppressKeyPress = true;
-
-            if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab) ActiveControl = button_OK;
-            else if (e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 textBox_PW.Focus();
                 PW_Click();
             }
+
+        }
+
+        private void textBox_ID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+                e.SuppressKeyPress = true;
         }
 
         private void PW_Click()
@@ -100,8 +76,7 @@ namespace WEEK07_01
             if (textBox_PW.Text == "비밀번호를 입력해주세요.")
             {
                 textBox_PW.Text = "";
-                textBox_PW.PasswordChar = '●';
-                textBox_PW.ForeColor = SystemColors.WindowText;
+                textBox_PW.PasswordChar = '*';
             }
         }
         private void textBox_PW_Click(object sender, EventArgs e)
@@ -115,41 +90,22 @@ namespace WEEK07_01
             {
                 textBox_PW.Text = "비밀번호를 입력해주세요.";
                 textBox_PW.PasswordChar = '\0';
-                textBox_PW.ForeColor = SystemColors.WindowFrame;
+            }
+        }
+        private void textBox_PW_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) bt_OK();
+            else if (e.KeyData == (Keys.Shift | Keys.Tab))
+            {
+                textBox_ID.Focus();
+                ID_Click();
             }
         }
 
         private void textBox_PW_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
                 e.SuppressKeyPress = true;
-
-            if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab)
-            {
-                textBox_ID.Focus();
-                ID_Click();
-            }
-            else if (e.KeyCode == Keys.Tab) ActiveControl = button_OK;
         }
-
-        private void button_OK_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter || e.Modifiers == Keys.Shift || e.KeyCode == Keys.Tab)
-                e.SuppressKeyPress = true;
-
-            if (e.KeyCode == Keys.Enter) bt_OK();
-            else if (e.Modifiers == Keys.Shift && e.KeyCode == Keys.Tab)
-            {
-                textBox_PW.Focus();
-                PW_Click();
-            }
-            else if (e.KeyCode == Keys.Tab)
-            {
-                textBox_ID.Focus();
-                ID_Click();
-            }
-        }
-
     }
 }
