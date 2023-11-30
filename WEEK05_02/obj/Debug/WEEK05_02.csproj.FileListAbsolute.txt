@@ -1,13 +1,3 @@
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.csproj.AssemblyReference.cache
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.Form1.resources
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.Properties.Resources.resources
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.csproj.GenerateResource.cache
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.csproj.CoreCompileInputs.cache
-W:\WINP\WEEK05_02\bin\Debug\WEEK05_02.exe.config
-W:\WINP\WEEK05_02\bin\Debug\WEEK05_02.exe
-W:\WINP\WEEK05_02\bin\Debug\WEEK05_02.pdb
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.exe
-W:\WINP\WEEK05_02\obj\Debug\WEEK05_02.pdb
 D:\WinP\20202717_안규태\WEEK05_02\bin\Debug\WEEK05_02.exe.config
 D:\WinP\20202717_안규태\WEEK05_02\bin\Debug\WEEK05_02.exe
 D:\WinP\20202717_안규태\WEEK05_02\bin\Debug\WEEK05_02.pdb

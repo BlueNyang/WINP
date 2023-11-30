@@ -11,7 +11,7 @@ namespace WEEK12
 {
     internal class MP3Player
     {
-        public bool loop { get; set; }
+        public bool Loop { get; set; }
         public bool isOpened = false;
 
         private StringBuilder returnData;
@@ -30,7 +30,7 @@ namespace WEEK12
             {
                 string command = "close MediaFile";
                 mciSendString(command, null, 0, IntPtr.Zero);
-                loop = false;
+                Loop = false;
                 isOpened = false;
             }
         }
@@ -51,7 +51,7 @@ namespace WEEK12
             {
                 string command = "play MediaFile";
 
-                if (loop)
+                if (Loop)
                     command += " REPEAT";
 
                 mciSendString(command, null, 0, IntPtr.Zero);

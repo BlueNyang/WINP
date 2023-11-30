@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WEEK11_01
@@ -15,9 +10,17 @@ namespace WEEK11_01
     public partial class Form1 : Form
     {
         Graphics g;
+        private readonly string filename = @"원광대로고.png";
+
         public Form1()
         {
             InitializeComponent();
+
+            //로고 이미지 파일 확인
+            string cd = Environment.CurrentDirectory;
+            DirectoryInfo proj_path = new DirectoryInfo(Path.Combine(cd, $@"..\..\.."));
+            if (!File.Exists(Path.Combine(cd, filename)))
+                File.Copy(Path.Combine(proj_path.FullName, filename), Path.Combine(cd, filename));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,18 +32,17 @@ namespace WEEK11_01
 
         private void FormResize(object sender, EventArgs e)
         {
+            g = CreateGraphics();
             Invalidate();
         }
 
         private void Painting(object sender, PaintEventArgs e)
         {
-            gradient2();
+            DrawImage3();
         }
 
         private void painting()
         {
-            Graphics g = CreateGraphics();
-
             SolidBrush b = new SolidBrush(Color.LightBlue);
             g.FillRectangle(b, ClientRectangle);
             b.Dispose();
@@ -48,10 +50,7 @@ namespace WEEK11_01
 
         private void wkulogo()
         {
-            string filename = @"\원광대로고.png";
-            if (!File.Exists(Environment.CurrentDirectory + filename))
-                File.Copy($@"C:\Users\xpsj2\응애\4학기\Win{filename}", Environment.CurrentDirectory + filename);
-            Image img = new Bitmap("원광대로고.png");
+            Image img = new Bitmap(filename);
             TextureBrush b = new TextureBrush(img);
             g.FillRectangle(b, ClientRectangle);
             img.Dispose();
@@ -76,6 +75,7 @@ namespace WEEK11_01
 
         private void gradient2()
         {
+
             Point[] pts = {
                 new Point(ClientRectangle.Width / 2, 0),
                 new Point(0, ClientRectangle.Height),
@@ -285,8 +285,68 @@ new Point(30, 115), new Point(90, 90)
 
         private void DrawString3()
         {
+            string s = "This is a long string that will wrap";
+            s += "It will be centered both vertically and horizontally";
+            Font f = new Font("Tahoma", 15);
 
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;
+            sf.LineAlignment = StringAlignment.Center;
+            g.DrawString(s, f, Brushes.Black, ClientRectangle, sf);
+            f.Dispose();
         }
 
+        private void MeasureString()
+        {
+            string s = "Hello World!";
+            Font f = new Font("Tahoma", 15);
+            SizeF sf = g.MeasureString(s, f);
+            g.DrawString(s, f, Brushes.Black, (ClientRectangle.Width - sf.Width) / 2, (ClientRectangle.Height - sf.Height) / 2);
+            g.DrawRectangle(Pens.Black, (ClientRectangle.Width - sf.Width) / 2, (ClientRectangle.Height - sf.Height) / 2, sf.Width, sf.Height);
+        }
+
+        private void MeasureString2()
+        {
+            string s = "This is long enough to wrap";
+            s += "We'll use a 15pt font, and assume";
+            s += "the text string must fit into a width of 250 pixels.";
+
+            Font f = new Font("Tahoma", 15);
+            SizeF sf = g.MeasureString(s, f, 250);
+            RectangleF rf = new RectangleF(20, 20, sf.Width, sf.Height);
+            Rectangle r = Rectangle.Ceiling(rf);
+
+            g.DrawString(s, f, Brushes.Black, rf);
+            g.DrawRectangle(Pens.Black, r);
+
+            f.Dispose();
+        }
+
+        private void DrawImage()
+        {
+            Image img = new Bitmap(filename);
+            g.DrawImage(img, 0, 0);
+            //g.DrawImage(img, ClientRectangle);
+        }
+
+        private void DrawImage2()
+        {
+            Image img = new Bitmap(filename);
+            Point[] pts1 = { new Point(0, 0), new Point(200, 0), new Point(50, 100) };
+            Point[] pts2 = { new Point(0, 100), new Point(200, 100), new Point(0, 0) };
+            Point[] pts3 = { new Point(100, 0), new Point(100, 200), new Point(0, 0) };
+
+            g.DrawImage(img, pts3);
+        }
+
+        private void DrawImage3()
+        {
+            Image img = new Bitmap(filename);
+
+            Rectangle partial_source_rect = new Rectangle(0, 0, 80, 30);
+            Rectangle draw_rect = new Rectangle(0, 0, 200, 100);
+
+            g.DrawImage(img, draw_rect, partial_source_rect, GraphicsUnit.Pixel);
+        }
     }
 }

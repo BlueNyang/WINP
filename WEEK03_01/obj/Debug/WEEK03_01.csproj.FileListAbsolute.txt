@@ -5,10 +5,3 @@ D:\WinP\20202717_안규태\WEEK03_01\obj\Debug\WEEK03_01.csproj.AssemblyReferenc
 D:\WinP\20202717_안규태\WEEK03_01\obj\Debug\WEEK03_01.csproj.CoreCompileInputs.cache
 D:\WinP\20202717_안규태\WEEK03_01\obj\Debug\WEEK03_01.exe
 D:\WinP\20202717_안규태\WEEK03_01\obj\Debug\WEEK03_01.pdb
-W:\WINP\WEEK03_01\bin\Debug\WEEK03_01.exe.config
-W:\WINP\WEEK03_01\bin\Debug\WEEK03_01.exe
-W:\WINP\WEEK03_01\bin\Debug\WEEK03_01.pdb
-W:\WINP\WEEK03_01\obj\Debug\WEEK03_01.csproj.AssemblyReference.cache
-W:\WINP\WEEK03_01\obj\Debug\WEEK03_01.csproj.CoreCompileInputs.cache
-W:\WINP\WEEK03_01\obj\Debug\WEEK03_01.exe
-W:\WINP\WEEK03_01\obj\Debug\WEEK03_01.pdb
