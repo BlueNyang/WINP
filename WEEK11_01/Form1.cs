@@ -14,13 +14,16 @@ namespace WEEK11_01
 {
     public partial class Form1 : Form
     {
-
         Graphics g;
         public Form1()
         {
             InitializeComponent();
-            Paint += new PaintEventHandler(Painting);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             Resize += new EventHandler(FormResize);
+            Paint += new PaintEventHandler(Painting);
             g = CreateGraphics();
         }
 
@@ -31,8 +34,9 @@ namespace WEEK11_01
 
         private void Painting(object sender, PaintEventArgs e)
         {
-            DrawRainbowStar();
+            gradient2();
         }
+
         private void painting()
         {
             Graphics g = CreateGraphics();
@@ -273,9 +277,9 @@ new Point(30, 115), new Point(90, 90)
             s += " With a 250pxwidth rectangle, ";
             s += "it requires six lines to display the string in its entirety.";
             Font f = new Font("Tahoma", 15);
-            Rectangle r = new Rectangle(10, 10, 250, 150);
-            g.DrawRectangle(Pens.Black, r);
+            Rectangle r = new Rectangle(10, 10, ClientSize.Width - 30, ClientSize.Height - 30);
             g.DrawString(s, f, Brushes.Black, r);
+            g.DrawRectangle(Pens.Black, r);
             f.Dispose();
         }
 
@@ -283,7 +287,6 @@ new Point(30, 115), new Point(90, 90)
         {
 
         }
-
 
     }
 }
